@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "license": "MIT",
   "scripts": {
     "lint": "eslint *.ts*",
@@ -13,8 +21,6 @@
     "@rollup/plugin-typescript": "^8.5.0",
     "@types/react": "^18.0.34",
     "@types/react-dom": "^17.0.11",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
     "rollup": "^2.79.0",
     "tsconfig": "workspace:*",
